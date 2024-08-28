@@ -1,7 +1,14 @@
-﻿namespace Domain.RentEasy.Apartment
+﻿using Domain.RentEasy.Abstractions;
+
+namespace Domain.RentEasy.Apartment
 {
-    public sealed class Apartment
+    public sealed class Apartment : Entity
     {
+        public Apartment(Guid id)
+            : base(id)
+        {
+        }
+
         public Guid Id { get; private set; }
 
         public string Name { get; private set; }
