@@ -1,12 +1,11 @@
-﻿namespace Domain.RentEasy.Abstractions
-{
-    public abstract class Entity
-    {
-        protected Entity(Guid id)
-        {
-            Id = id;
-        }
+﻿namespace Domain.RentEasy.Abstractions;
 
-        public Guid Id { get; init; }
+public abstract class Entity
+{
+    protected Entity(Guid id)
+    {
+        Id = id;
     }
+
+    public Guid Id { get; init; }
 }
