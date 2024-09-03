@@ -1,7 +1,6 @@
 ﻿using Domain.RentEasy.Abstractions;
-using Domain.RentEasy.User;
 
-namespace Domain.RentEasy.Users;
+namespace Domain.RentEasy.User;
 
 public sealed class User : Entity
 {
