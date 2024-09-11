@@ -1,4 +1,4 @@
-﻿namespace Domain.RentEasy.Apartment;
+﻿namespace Domain.RentEasy.Apartments;
 
 public record Money(decimal Amount, Currency Currency)
 {

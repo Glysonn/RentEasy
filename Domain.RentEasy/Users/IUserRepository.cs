@@ -1,4 +1,4 @@
-﻿namespace Domain.RentEasy.User;
+﻿namespace Domain.RentEasy.Users;
 
 public interface IUserRepository
 {

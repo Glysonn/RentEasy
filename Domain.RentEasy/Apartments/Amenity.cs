@@ -1,4 +1,4 @@
-﻿namespace Domain.RentEasy.Apartment;
+﻿namespace Domain.RentEasy.Apartments;
 
 public enum Amenity
 {

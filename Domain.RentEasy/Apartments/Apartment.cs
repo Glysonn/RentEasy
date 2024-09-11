@@ -1,6 +1,6 @@
 ﻿using Domain.RentEasy.Abstractions;
 
-namespace Domain.RentEasy.Apartment;
+namespace Domain.RentEasy.Apartments;
 
 public sealed class Apartment : Entity
 {
