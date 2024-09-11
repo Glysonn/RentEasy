@@ -1,4 +1,4 @@
-﻿namespace Domain.RentEasy.Apartments;
+﻿namespace Domain.RentEasy.Shared;
 
 public record Money(decimal Amount, Currency Currency)
 {
@@ -11,4 +11,6 @@ public record Money(decimal Amount, Currency Currency)
     }
 
     public static Money Zero() => new(0, Currency.None);
+    public static Money Zero(Currency currency) => new(0, currency);
+    public bool IsZero() => this == Zero();
 }

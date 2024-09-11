@@ -1,4 +1,4 @@
-﻿namespace Domain.RentEasy.Apartments;
+﻿namespace Domain.RentEasy.Shared;
 
 public record Currency
 {

@@ -1,4 +1,5 @@
 ﻿using Domain.RentEasy.Abstractions;
+using Domain.RentEasy.Shared;
 
 namespace Domain.RentEasy.Apartments;
 
