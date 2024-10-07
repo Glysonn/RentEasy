@@ -1,6 +1,6 @@
 ﻿using RentEasy.Domain.Abstractions;
 
-namespace RentEasy.Domain.Booking.Events;
+namespace RentEasy.Domain.Booking;
 
 public static class BookingErrors
 {
