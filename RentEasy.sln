@@ -9,6 +9,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{E299616A-F
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RentEasy.Domain", "RentEasy.Domain\RentEasy.Domain.csproj", "{42E9F81A-12B0-4D2B-8F5D-E7EA38FD6B15}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentEasy.Application", "RentEasy.Application\RentEasy.Application.csproj", "{436A0F3B-7E7A-4EBE-B2AB-54B026B2D341}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,12 +21,17 @@ Global
 		{42E9F81A-12B0-4D2B-8F5D-E7EA38FD6B15}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{42E9F81A-12B0-4D2B-8F5D-E7EA38FD6B15}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{42E9F81A-12B0-4D2B-8F5D-E7EA38FD6B15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{436A0F3B-7E7A-4EBE-B2AB-54B026B2D341}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{436A0F3B-7E7A-4EBE-B2AB-54B026B2D341}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{436A0F3B-7E7A-4EBE-B2AB-54B026B2D341}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{436A0F3B-7E7A-4EBE-B2AB-54B026B2D341}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{42E9F81A-12B0-4D2B-8F5D-E7EA38FD6B15} = {4B351FD3-D405-4D67-90D6-07770A6B2B16}
+		{436A0F3B-7E7A-4EBE-B2AB-54B026B2D341} = {4B351FD3-D405-4D67-90D6-07770A6B2B16}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0E44DD72-7733-46EF-AE56-5961F0E69B09}
