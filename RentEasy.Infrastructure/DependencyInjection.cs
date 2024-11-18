@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using RentEasy.Application.Abstractions.Clock;
 using RentEasy.Application.Abstractions.Email;
@@ -15,6 +16,14 @@ public static class DependencyInjection
     {
         services.AddSingleton<IDateTimeProvider, DateTimeProvider>();
         services.AddTransient<IEmailService, EmailService>();
+
+        var connectionString = configuration.GetConnectionString("Database") ??
+            throw new ArgumentNullException(nameof(configuration));
+
+        services.AddDbContext<ApplicationDbContext>(options =>
+        {
+            options.UseNpgsql(connectionString).UseSnakeCaseNamingConvention();
+        });
 
         return services;
     }
