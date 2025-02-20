@@ -9,9 +9,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{E299616A-F
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RentEasy.Domain", "RentEasy.Domain\RentEasy.Domain.csproj", "{42E9F81A-12B0-4D2B-8F5D-E7EA38FD6B15}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentEasy.Application", "RentEasy.Application\RentEasy.Application.csproj", "{436A0F3B-7E7A-4EBE-B2AB-54B026B2D341}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RentEasy.Application", "RentEasy.Application\RentEasy.Application.csproj", "{436A0F3B-7E7A-4EBE-B2AB-54B026B2D341}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentEasy.Infrastructure", "RentEasy.Infrastructure\RentEasy.Infrastructure.csproj", "{9035EBE2-D95D-4FA0-92D2-693E9E2B9274}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RentEasy.Infrastructure", "RentEasy.Infrastructure\RentEasy.Infrastructure.csproj", "{9035EBE2-D95D-4FA0-92D2-693E9E2B9274}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RentEasy.Api", "RentEasy.Api\RentEasy.Api.csproj", "{0D71CBC3-BE2F-42FF-B416-A2DB9109E404}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +33,10 @@ Global
 		{9035EBE2-D95D-4FA0-92D2-693E9E2B9274}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9035EBE2-D95D-4FA0-92D2-693E9E2B9274}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9035EBE2-D95D-4FA0-92D2-693E9E2B9274}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D71CBC3-BE2F-42FF-B416-A2DB9109E404}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D71CBC3-BE2F-42FF-B416-A2DB9109E404}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D71CBC3-BE2F-42FF-B416-A2DB9109E404}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D71CBC3-BE2F-42FF-B416-A2DB9109E404}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -39,6 +45,7 @@ Global
 		{42E9F81A-12B0-4D2B-8F5D-E7EA38FD6B15} = {4B351FD3-D405-4D67-90D6-07770A6B2B16}
 		{436A0F3B-7E7A-4EBE-B2AB-54B026B2D341} = {4B351FD3-D405-4D67-90D6-07770A6B2B16}
 		{9035EBE2-D95D-4FA0-92D2-693E9E2B9274} = {4B351FD3-D405-4D67-90D6-07770A6B2B16}
+		{0D71CBC3-BE2F-42FF-B416-A2DB9109E404} = {4B351FD3-D405-4D67-90D6-07770A6B2B16}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0E44DD72-7733-46EF-AE56-5961F0E69B09}
