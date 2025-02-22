@@ -7,7 +7,7 @@ using RentEasy.Application.Abstractions.Data;
 using RentEasy.Application.Abstractions.Email;
 using RentEasy.Domain.Abstractions;
 using RentEasy.Domain.Apartments;
-using RentEasy.Domain.Booking;
+using RentEasy.Domain.Bookings;
 using RentEasy.Domain.Users;
 using RentEasy.Infrastructure.Clock;
 using RentEasy.Infrastructure.Data;

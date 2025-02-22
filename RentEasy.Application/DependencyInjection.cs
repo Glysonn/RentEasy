@@ -1,7 +1,7 @@
 ﻿using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
 using RentEasy.Application.Abstractions.Behaviors;
-using RentEasy.Domain.Booking;
+using RentEasy.Domain.Bookings;
 
 namespace RentEasy.Application;
 

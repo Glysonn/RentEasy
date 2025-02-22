@@ -1,4 +1,4 @@
-﻿namespace RentEasy.Domain.Booking;
+﻿namespace RentEasy.Domain.Bookings;
 
 public record DateRange
 {

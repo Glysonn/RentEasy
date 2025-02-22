@@ -1,7 +1,7 @@
 ﻿using MediatR;
 using RentEasy.Application.Abstractions.Email;
-using RentEasy.Domain.Booking;
-using RentEasy.Domain.Booking.Events;
+using RentEasy.Domain.Bookings;
+using RentEasy.Domain.Bookings.Events;
 using RentEasy.Domain.Users;
 
 namespace RentEasy.Application.Bookings.ReserveBooking;

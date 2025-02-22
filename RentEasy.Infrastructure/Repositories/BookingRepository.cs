@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using RentEasy.Domain.Apartments;
-using RentEasy.Domain.Booking;
+using RentEasy.Domain.Bookings;
 
 namespace RentEasy.Infrastructure.Repositories;
 

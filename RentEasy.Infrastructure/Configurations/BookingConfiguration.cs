@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using RentEasy.Domain.Apartments;
-using RentEasy.Domain.Booking;
+using RentEasy.Domain.Bookings;
 using RentEasy.Domain.Shared;
 using RentEasy.Domain.Users;
 

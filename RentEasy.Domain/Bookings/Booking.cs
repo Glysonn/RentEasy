@@ -1,9 +1,9 @@
 ﻿using RentEasy.Domain.Abstractions;
 using RentEasy.Domain.Apartments;
-using RentEasy.Domain.Booking.Events;
+using RentEasy.Domain.Bookings.Events;
 using RentEasy.Domain.Shared;
 
-namespace RentEasy.Domain.Booking;
+namespace RentEasy.Domain.Bookings;
 
 public sealed class Booking : Entity
 {
