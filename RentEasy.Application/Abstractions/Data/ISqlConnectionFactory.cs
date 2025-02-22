@@ -2,7 +2,7 @@
 
 namespace RentEasy.Application.Abstractions.Data;
 
-internal interface ISqlConnectionFactory
+public interface ISqlConnectionFactory
 {
     IDbConnection CreateConnection();
 }

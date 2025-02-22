@@ -1,6 +1,6 @@
 ﻿namespace RentEasy.Application.Abstractions.Clock;
 
-internal interface IDateTimeProvider
+public interface IDateTimeProvider
 {
     DateTime UtcNow { get; }
 }
