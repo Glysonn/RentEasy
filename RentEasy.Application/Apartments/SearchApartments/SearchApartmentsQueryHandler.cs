@@ -2,7 +2,7 @@
 using RentEasy.Application.Abstractions.Data;
 using RentEasy.Application.Abstractions.Messaging;
 using RentEasy.Domain.Abstractions;
-using RentEasy.Domain.Booking;
+using RentEasy.Domain.Bookings;
 
 namespace RentEasy.Application.Apartments.SearchApartments;
 

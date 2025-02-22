@@ -1,7 +1,7 @@
 ﻿using RentEasy.Domain.Apartments;
 using RentEasy.Domain.Shared;
 
-namespace RentEasy.Domain.Booking;
+namespace RentEasy.Domain.Bookings;
 
 public class PricingService
 {

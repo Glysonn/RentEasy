@@ -1,6 +1,6 @@
 ﻿using RentEasy.Domain.Apartments;
 
-namespace RentEasy.Domain.Booking;
+namespace RentEasy.Domain.Bookings;
 
 public interface IBookingRepository
 {

@@ -1,6 +1,6 @@
 ﻿using RentEasy.Domain.Shared;
 
-namespace RentEasy.Domain.Booking;
+namespace RentEasy.Domain.Bookings;
 
 public record PricingDetails(
     Money PriceForPeriod,
