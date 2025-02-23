@@ -1,3 +1,4 @@
+using RentEasy.Api.Extensions;
 using RentEasy.Application;
 using RentEasy.Infrastructure;
 
@@ -17,6 +18,8 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+    
+    app.ApplyMigrations();
 }
 
 app.UseHttpsRedirection();
