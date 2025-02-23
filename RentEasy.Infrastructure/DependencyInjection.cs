@@ -8,6 +8,7 @@ using RentEasy.Application.Abstractions.Email;
 using RentEasy.Domain.Abstractions;
 using RentEasy.Domain.Apartments;
 using RentEasy.Domain.Bookings;
+using RentEasy.Domain.Reviews;
 using RentEasy.Domain.Users;
 using RentEasy.Infrastructure.Clock;
 using RentEasy.Infrastructure.Data;
@@ -37,6 +38,7 @@ public static class DependencyInjection
         services.AddScoped<IBookingRepository, BookingRepository>();
         services.AddScoped<IApartmentRepository, ApartmentRepository>();
         services.AddScoped<IUserRepository, UserRepository>();
+        services.AddScoped<IReviewRepository, ReviewRepository>();
         services.AddScoped<IUnitOfWork>(serviceProvider => serviceProvider.GetRequiredService<ApplicationDbContext>());
 
         services.AddSingleton<ISqlConnectionFactory>(_ => new SqlConnectionFactory(connectionString));
