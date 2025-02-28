@@ -1,0 +1,24 @@
+version: '3.4'
+
+services:
+  renteasy.api:
+    image: ${DOCKER_REGISTRY-}renteasyapi
+    container_name: RentEasy.Api
+    build:
+      context: .
+      dockerfile: RentEasy.Api/Dockerfile
+    depends_on:
+        - renteasy-db
+
+  renteasy-db:
+    image: postgres:latest
+    container_name: RentEasy.Db
+    environment:
+      - POSTGRES_DB=renteasy
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - ./.containers/database:/var/lib/postgresql/data
+    ports:
+        - 5432:5432
+  
