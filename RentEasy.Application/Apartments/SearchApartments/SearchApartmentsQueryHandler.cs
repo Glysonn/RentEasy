@@ -40,7 +40,7 @@ internal sealed class SearchApartmentsQueryHandler : IQueryHandler<SearchApartme
                 a.address_zip_code AS ZipCode,
                 a.address_city AS City,
                 a.address_street AS Street
-            FROM aparments AS a
+            FROM apartments AS a
             WHERE NOT EXISTS
             (
                 SELECT 1
