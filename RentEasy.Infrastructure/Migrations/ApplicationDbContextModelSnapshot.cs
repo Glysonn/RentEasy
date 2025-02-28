@@ -102,15 +102,15 @@ namespace RentEasy.Infrastructure.Migrations
                         .HasColumnName("user_id");
 
                     b.HasKey("Id")
-                        .HasName("pk_booking");
+                        .HasName("pk_bookings");
 
                     b.HasIndex("ApartmentId")
-                        .HasDatabaseName("ix_booking_apartment_id");
+                        .HasDatabaseName("ix_bookings_apartment_id");
 
                     b.HasIndex("UserId")
-                        .HasDatabaseName("ix_booking_user_id");
+                        .HasDatabaseName("ix_bookings_user_id");
 
-                    b.ToTable("booking", (string)null);
+                    b.ToTable("bookings", (string)null);
                 });
 
             modelBuilder.Entity("RentEasy.Domain.Reviews.Review", b =>
@@ -303,14 +303,14 @@ namespace RentEasy.Infrastructure.Migrations
                         .HasForeignKey("ApartmentId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired()
-                        .HasConstraintName("fk_booking_apartments_apartment_id");
+                        .HasConstraintName("fk_bookings_apartments_apartment_id");
 
                     b.HasOne("RentEasy.Domain.Users.User", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired()
-                        .HasConstraintName("fk_booking_user_user_id");
+                        .HasConstraintName("fk_bookings_user_user_id");
 
                     b.OwnsOne("RentEasy.Domain.Shared.Money", "AmenitiesUpCharge", b1 =>
                         {
@@ -329,11 +329,11 @@ namespace RentEasy.Infrastructure.Migrations
 
                             b1.HasKey("BookingId");
 
-                            b1.ToTable("booking");
+                            b1.ToTable("bookings");
 
                             b1.WithOwner()
                                 .HasForeignKey("BookingId")
-                                .HasConstraintName("fk_booking_booking_id");
+                                .HasConstraintName("fk_bookings_bookings_id");
                         });
 
                     b.OwnsOne("RentEasy.Domain.Shared.Money", "CleaningFee", b1 =>
@@ -353,11 +353,11 @@ namespace RentEasy.Infrastructure.Migrations
 
                             b1.HasKey("BookingId");
 
-                            b1.ToTable("booking");
+                            b1.ToTable("bookings");
 
                             b1.WithOwner()
                                 .HasForeignKey("BookingId")
-                                .HasConstraintName("fk_booking_booking_id");
+                                .HasConstraintName("fk_bookings_bookings_id");
                         });
 
                     b.OwnsOne("RentEasy.Domain.Shared.Money", "PriceForPeriod", b1 =>
@@ -377,11 +377,11 @@ namespace RentEasy.Infrastructure.Migrations
 
                             b1.HasKey("BookingId");
 
-                            b1.ToTable("booking");
+                            b1.ToTable("bookings");
 
                             b1.WithOwner()
                                 .HasForeignKey("BookingId")
-                                .HasConstraintName("fk_booking_booking_id");
+                                .HasConstraintName("fk_bookings_bookings_id");
                         });
 
                     b.OwnsOne("RentEasy.Domain.Shared.Money", "TotalPrice", b1 =>
@@ -401,11 +401,11 @@ namespace RentEasy.Infrastructure.Migrations
 
                             b1.HasKey("BookingId");
 
-                            b1.ToTable("booking");
+                            b1.ToTable("bookings");
 
                             b1.WithOwner()
                                 .HasForeignKey("BookingId")
-                                .HasConstraintName("fk_booking_booking_id");
+                                .HasConstraintName("fk_bookings_bookings_id");
                         });
 
                     b.OwnsOne("RentEasy.Domain.Bookings.DateRange", "Duration", b1 =>
@@ -424,11 +424,11 @@ namespace RentEasy.Infrastructure.Migrations
 
                             b1.HasKey("BookingId");
 
-                            b1.ToTable("booking");
+                            b1.ToTable("bookings");
 
                             b1.WithOwner()
                                 .HasForeignKey("BookingId")
-                                .HasConstraintName("fk_booking_booking_id");
+                                .HasConstraintName("fk_bookings_bookings_id");
                         });
 
                     b.Navigation("AmenitiesUpCharge")
@@ -461,7 +461,7 @@ namespace RentEasy.Infrastructure.Migrations
                         .HasForeignKey("BookingId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired()
-                        .HasConstraintName("fk_reviews_booking_booking_id");
+                        .HasConstraintName("fk_reviews_bookings_booking_id");
 
                     b.HasOne("RentEasy.Domain.Users.User", null)
                         .WithMany()

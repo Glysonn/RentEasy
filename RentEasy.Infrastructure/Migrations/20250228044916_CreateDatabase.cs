@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace RentEasy.Infrastructure.Migrations
 {
     /// <inheritdoc />
-    public partial class Create_Database : Migration
+    public partial class CreateDatabase : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -51,7 +51,7 @@ namespace RentEasy.Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "booking",
+                name: "bookings",
                 columns: table => new
                 {
                     id = table.Column<Guid>(type: "uuid", nullable: false),
@@ -76,15 +76,15 @@ namespace RentEasy.Infrastructure.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("pk_booking", x => x.id);
+                    table.PrimaryKey("pk_bookings", x => x.id);
                     table.ForeignKey(
-                        name: "fk_booking_apartments_apartment_id",
+                        name: "fk_bookings_apartments_apartment_id",
                         column: x => x.apartment_id,
                         principalTable: "apartments",
                         principalColumn: "id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "fk_booking_user_user_id",
+                        name: "fk_bookings_user_user_id",
                         column: x => x.user_id,
                         principalTable: "users",
                         principalColumn: "id",
@@ -113,9 +113,9 @@ namespace RentEasy.Infrastructure.Migrations
                         principalColumn: "id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "fk_reviews_booking_booking_id",
+                        name: "fk_reviews_bookings_booking_id",
                         column: x => x.booking_id,
-                        principalTable: "booking",
+                        principalTable: "bookings",
                         principalColumn: "id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
@@ -127,13 +127,13 @@ namespace RentEasy.Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "ix_booking_apartment_id",
-                table: "booking",
+                name: "ix_bookings_apartment_id",
+                table: "bookings",
                 column: "apartment_id");
 
             migrationBuilder.CreateIndex(
-                name: "ix_booking_user_id",
-                table: "booking",
+                name: "ix_bookings_user_id",
+                table: "bookings",
                 column: "user_id");
 
             migrationBuilder.CreateIndex(
@@ -165,7 +165,7 @@ namespace RentEasy.Infrastructure.Migrations
                 name: "reviews");
 
             migrationBuilder.DropTable(
-                name: "booking");
+                name: "bookings");
 
             migrationBuilder.DropTable(
                 name: "apartments");
