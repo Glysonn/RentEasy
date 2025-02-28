@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using RentEasy.Api.Middleware;
 using RentEasy.Infrastructure;
 
 namespace RentEasy.Api.Extensions;
@@ -12,5 +13,10 @@ public static class ApplicationBuilderExtensions
         using var dbContext = serviceScope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
         
         dbContext.Database.Migrate();
+    }
+
+    public static void UseCustomExceptionHandler(this IApplicationBuilder app)
+    {
+        app.UseMiddleware<ExceptionHandlingMiddleware>();
     }
 }
