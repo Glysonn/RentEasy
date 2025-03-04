@@ -2,4 +2,5 @@
 
 namespace RentEasy.Domain.Bookings.Events;
 
-public record BookingCompletedDomainEvent(Guid id) : IDomainEvent;
+public sealed record BookingCompletedDomainEvent(Guid Id) 
+    : IDomainEvent;

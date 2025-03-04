@@ -1,3 +1,3 @@
 ﻿namespace RentEasy.Domain.Users;
 
-public record Email(string Value);
+public sealed record Email(string Value);

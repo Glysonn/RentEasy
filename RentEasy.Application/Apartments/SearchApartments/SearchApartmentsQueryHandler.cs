@@ -58,8 +58,7 @@ internal sealed class SearchApartmentsQueryHandler : IQueryHandler<SearchApartme
             sql,
             (apartment, address) =>
             {
-                apartment.Address = address;
-                return apartment;
+                return apartment with { Address = address};
             },
             new
             {

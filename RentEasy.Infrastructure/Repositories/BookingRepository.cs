@@ -4,11 +4,9 @@ using RentEasy.Domain.Bookings;
 
 namespace RentEasy.Infrastructure.Repositories;
 
-internal sealed class BookingRepository : Repository<Booking>, IBookingRepository
+internal sealed class BookingRepository 
+    : Repository<Booking>, IBookingRepository
 {
-    public BookingRepository(ApplicationDbContext context) : base(context)
-    {
-    }
 
     private static readonly BookingStatus[] _activeBookingStatuses =
     {
@@ -17,9 +15,14 @@ internal sealed class BookingRepository : Repository<Booking>, IBookingRepositor
         BookingStatus.Completed
     };
 
+    public BookingRepository(ApplicationDbContext context)
+        : base(context)
+    {
+    }
+
     public async Task<bool> IsOverlappingAsync(
-        Apartment apartment, 
-        DateRange duration, 
+        Apartment apartment,
+        DateRange duration,
         CancellationToken cancellationToken = default)
     {
         return await DbContext

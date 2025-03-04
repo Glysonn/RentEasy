@@ -1,6 +1,6 @@
 ﻿namespace RentEasy.Domain.Abstractions;
 
-public record Error(string Code, string Name)
+public sealed record Error(string Code, string Name)
 {
     public static readonly Error None = new(string.Empty, string.Empty);
 

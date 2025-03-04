@@ -4,6 +4,12 @@ namespace RentEasy.Domain.Abstractions;
 
 public class Result
 {
+    public bool IsSuccess { get; }
+
+    public bool IsFailure => !IsSuccess;
+
+    public Error Error { get; }
+
     protected internal Result(bool isSuccess, Error error)
     {
         if (isSuccess && error != Error.None)
@@ -16,11 +22,6 @@ public class Result
         Error = error;
     }
 
-    public bool IsSuccess { get; }
-
-    public bool IsFailure => !IsSuccess;
-
-    public Error Error { get; }
 
     public static Result Success() => new(true, Error.None);
     public static Result<TValue> Success<TValue>(TValue value) => new(value, true, Error.None);
@@ -34,6 +35,11 @@ public class Result
 
 public class Result<TValue> : Result
 {
+    [NotNull]
+    public TValue Value => IsSuccess
+        ? _value!
+        : throw new InvalidOperationException("The value of a failure result can not be accessed.");
+
     private readonly TValue? _value;
 
     protected internal Result(TValue? value, bool isSuccess, Error error)
@@ -41,11 +47,6 @@ public class Result<TValue> : Result
     {
         _value = value;
     }
-
-    [NotNull]
-    public TValue Value => IsSuccess
-        ? _value!
-        : throw new InvalidOperationException("The value of a failure result can not be accessed.");
 
     public static implicit operator Result<TValue>(TValue? value) => Create(value);
 }

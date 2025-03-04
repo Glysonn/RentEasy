@@ -1,3 +1,3 @@
 ﻿namespace RentEasy.Domain.Apartments;
 
-public record Name(string Value);
+public sealed record Name(string Value);
